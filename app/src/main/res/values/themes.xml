@@ -1,9 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-	<!-- Base application theme. -->
-	<style name="Base.Theme.AppInterface" parent="Theme.Material3.DayNight.NoActionBar">
-		<!-- Customize your light theme here. -->
-		<!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-	</style>
 
-	<style name="Theme.AppInterface" parent="Base.Theme.AppInterface"/>
+    <!-- Base application theme -->
+    <style name="Base.Theme.AppInterface" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Colores personalizados -->
+        <item name="colorPrimary">#4CAF50</item>          <!-- Verde principal -->
+        <item name="colorOnPrimary">#FFFFFF</item>        <!-- Texto sobre colorPrimary -->
+        <item name="colorPrimaryContainer">#A5D6A7</item> <!-- Fondo más claro -->
+        <item name="colorSecondary">#81C784</item>        <!-- Verde secundario -->
+        <item name="android:statusBarColor">#388E3C</item><!-- Color de barra de estado -->
+        <item name="android:navigationBarColor">#388E3C</item> <!-- Color de barra inferior -->
+    </style>
+
+    <style name="Theme.AppInterface" parent="Base.Theme.AppInterface" />
+
 </resources>

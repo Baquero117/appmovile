@@ -15,6 +15,7 @@ class PersonaAdapter(private val personas: List<String>) : RecyclerView.Adapter<
 
     override fun onBindViewHolder(holder: PersonaViewHolder, position: Int) {
         holder.bind(personas[position])
+
     }
 
     override fun getItemCount(): Int = personas.size

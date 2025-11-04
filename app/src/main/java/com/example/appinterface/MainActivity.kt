@@ -23,6 +23,7 @@ import okhttp3.ResponseBody
 
 class MainActivity : AppCompatActivity() {
     private lateinit var persona: Persona
+    private var isCardVisible = false
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +42,15 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ProductosActivity::class.java)
             startActivity(intent)
         }
+
+
+
+
+    }
+
+
+    fun volverpag(v: View) {
+        onBackPressed()
     }
 
     fun crearpersona(v: View) {

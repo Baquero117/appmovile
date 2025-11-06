@@ -12,17 +12,17 @@ class PanelActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_panel)
 
-        // Referencias a los botones
+
         val btnClientes = findViewById<Button>(R.id.btnClientes)
         val btnProductos = findViewById<Button>(R.id.btnProductos)
 
-        // Abrir formulario de clientes
+
         btnClientes.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
-        // Abrir formulario de productos
+
         btnProductos.setOnClickListener {
             val intent = Intent(this, ProductosActivity::class.java)
             startActivity(intent)

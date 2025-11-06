@@ -23,16 +23,12 @@ class ProductosActivity : AppCompatActivity() {
         setContentView(R.layout.activity_productos)
     }
 
-    // -----------------------------
-    // Botón para volver atrás
-    // -----------------------------
+
     fun volverpag(v: View) {
         onBackPressed()
     }
 
-    // -----------------------------
-    // Crear producto (POST)
-    // -----------------------------
+
     fun crearProducto(v: View) {
         val nombre = findViewById<EditText>(R.id.nombreProducto)
         val descripcion = findViewById<EditText>(R.id.descripcionProducto)
@@ -50,9 +46,9 @@ class ProductosActivity : AppCompatActivity() {
             return
         }
 
-        // Crear objeto producto con los valores ingresados
+
         val nuevoProducto = producto(
-            id_producto = 0, // El backend debe autogenerar este campo
+            id_producto = 0,
             nombre = nombre.text.toString(),
             descripcion = descripcion.text.toString(),
             cantidad = cantidad.text.toString().toInt(),
@@ -61,7 +57,7 @@ class ProductosActivity : AppCompatActivity() {
             estado = estado.text.toString()
         )
 
-        // Enviar datos a la API
+
         RetrofitInstance.api2kotlin.crearProducto(nuevoProducto)
             .enqueue(object : Callback<ResponseBody> {
                 override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
@@ -79,9 +75,7 @@ class ProductosActivity : AppCompatActivity() {
             })
     }
 
-    // -----------------------------
-    // Mostrar productos (GET)
-    // -----------------------------
+
     @SuppressLint("MissingInflatedId")
     fun mostrarProductos(v: View) {
         val recyclerView = findViewById<RecyclerView>(R.id.RecyProductos)
